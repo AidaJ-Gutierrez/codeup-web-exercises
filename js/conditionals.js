@@ -33,6 +33,7 @@ function analyzeColor(color){
         return "Nothing to say about that color";
     }
 }
+console.log(analyzeColor(color));
 
 
 // Don't change the next two lines!
@@ -51,28 +52,32 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 // analyzeColor(randomColor);
-//console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-switch (randomColor){
-    case "blue":
-        return "blah"
-        break;
+function analyzeColor2(color){
 
-    case "red":
-        return "blah"
-        break;
-    case "cyan":
-        return "foo"
-        break;
+    switch (color){
+        case "blue":
+            return "blue is the color of the sky";
+            break;
 
-    default:
-        return "foobar"
-        break;
+        case "red":
+            return "Strawberries are red";
+            break;
+        case "cyan":
+            return "I don't know anything about cyan";
+            break;
+
+        default:
+            return "Nothing to say about that color";
+            break;
+        }
 }
+console.log(analyzeColor2("blue"));
 
 
 /**
@@ -83,22 +88,9 @@ switch (randomColor){
  */
 
 
-var color= prompt("Please, enter a color!")
+var color2= prompt("Please, enter a color!").toLowerCase();
 
-function analyzeColor(color){
-
-    if (color === "blue"){
-        alert  ("Blue is the color of the sky");
-    } else if (color === "red"){
-        alert ("Strawberries are red");
-    }else if (color === "cyan"){
-        alert ("I don't know anything about cyan");
-    }else{
-        alert ("Nothing to say about that color");
-    }
-}
-
- console.log(analyzeColor(color));
+alert(analyzeColor(color2));
 
 /* ########################################################################## */
 
@@ -130,19 +122,16 @@ function calculateTotal (number, totalAmount){
     }else if (number === 1 ){
         return "You got 10% discount!, Your new total is $" + (totalAmount - (0.10 * totalAmount.toFixed(2))) + " ."
     }else if (number === 2){
-        return "Great! You got 25% discount!" + (totalAmount - (0.25 * totalAmount.toFixed(2))) + " ."
+        return "Great! You got 25% discount! Your total is $" + (totalAmount - (0.25 * totalAmount.toFixed(2))) + " ."
     }else if (number === 3){
-      return "Wow,You got 35% discount!" + (totalAmount -(0.35 * totalAmount.toFixed(2))) + " ."
+      return "Wow,You got 35% discount! Your new total is $" + (totalAmount -(0.35 * totalAmount.toFixed(2))) + " ."
     } else if (number === 4) {
-        return "Amazing! You got 50% discount!" + (totalAmount -(0.50 * totalAmount.toFixed(2))) + " ."
+        return "Amazing! You got 50% discount! You only have to pay $" + (totalAmount -(0.50 * totalAmount.toFixed(2))) + " ."
     }else if (number === 5){
         return "You are a very lucky person, your total is $" + 0 + " . You are getting all for free!"
     }
 
 }
-console.log(calculateTotal(2, 100));
-
-alert (calculateTotal(number, totalAmount));
 
 
 
@@ -154,10 +143,12 @@ alert (calculateTotal(number, totalAmount));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-
+console.log(calculateTotal(2, 100));
 
  var luckyNumber = Math.floor(Math.random() * 6) + 1;
-alert("Your lucky number was." + luckyNumber )
+alert("Your lucky number was: " + luckyNumber );
+alert (calculateTotal(number, totalAmount));
+
 
 
 /**
@@ -181,18 +172,25 @@ function numberPicked(userNumber) {
     var wantNumber = confirm("Would you like to enter a number? ");
 
     if (wantNumber === true){
-        var userNumber = parseFloat( prompt( "What number would you like to enter?"));
-        if (userNumber % 2 === 0){
-            alert ("This number is even");
-        }else {
-            alert("this number is odd");
-        }
-        alert("Your number plus 100 is : " + (userNumber + 100 ));
 
-        if (userNumber > 0 ){
-            alert(" This number is positive.");
-        }else if (userNumber < 0){
-            alert("This number is negative.");
+        var userNumber = parseFloat( prompt( "What number would you like to enter?"));
+        if (!isNaN(userNumber)){
+
+            if (userNumber % 2 === 0){
+                alert ("This number is even");
+            }else {
+                alert("this number is odd");
+            }
+            alert("Your number plus 100 is  " + (userNumber + 100 ) + " .");
+
+            if (userNumber > 0 ){
+                alert(" This number is positive.");
+            }else if (userNumber < 0){
+                alert("This number is negative.");
+            }
+            alert("Thanks, for playing!")
+        }else{
+            alert("That is not a number!");
         }
 
     }else{
