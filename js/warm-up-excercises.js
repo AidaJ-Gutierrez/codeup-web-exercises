@@ -33,8 +33,22 @@
     console.log(breakfastMsg);
 
 
+// Friday Oct 15.
+    //Write a function called 'typeCheck' that takes an input and returns a string of the data type entered.
+    // If the data type is a string, return the string "Haha, it's a string of string!"
 
 
+     function typeCheck (input){
+         if (typeof input === "string"){
+             return "Haha, it\'s a string of string!";
+         }else {
+             return typeof input;
+         }}
+    Tests:
+        typeCheck('')
+    typeCheck(isNaN());
+    typeCheck(!false * 3);
+    typeCheck(4 + '4');
 
 
 
