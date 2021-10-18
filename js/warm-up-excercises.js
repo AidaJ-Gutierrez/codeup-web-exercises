@@ -50,7 +50,17 @@
     typeCheck(!false * 3);
     typeCheck(4 + '4');
 
+// Monday Oct.18
 
+    //- When writing code to test our test in TDD it's important to put yourself in the mindset of a (junior/senior**)
+    // web developer. This will help you in ensuring that our test our test are fully comprehensive.
+    // - When writing code with test provided to me, it's important for me to write code:
+    // A. With minimal effectiveness so as to green all the test.
+    // B. With full functionality so as to ensure my function works as intended.
+    // C. Both. ***
+
+
+// Tuesday Oct. 19
 
 
 
