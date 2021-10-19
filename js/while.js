@@ -21,22 +21,10 @@ i = 2;
         do {
             var conesBoughtByCostumers = Math.floor(Math.random() * (5 - 1+ 1) + 1);
             console.log(conesBoughtByCostumers);
-            conesBoughtByCostumers --;
+            conesToSell --;
         }while (conesToSell > 50);
 
 
-    console.log();
-
-
-
-
-
-
-
-
-
-
-
-
+        console.log(conesToSell);
 
 })();

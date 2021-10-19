@@ -6,12 +6,12 @@
 
 //      1 and 50, except for the number the user entered.
 
-    let userOdd = prompt("Please, choose an odd number between 1 and 50");
-    while (true) {
 
+    while (true) {
+        var userOdd = prompt("Please, choose an odd number between 1 and 50");
         if (userOdd % 2 === 0) {
-            alert(" That number is not odd, please enter an odd number.");
-            continue;
+           alert (" That number is not odd, please enter an odd number.");
+
         } else {
             break;
         }
