@@ -8,9 +8,9 @@
 
 
     while (true) {
-        var userOdd = prompt("Please, choose an odd number between 1 and 50");
+        var userOdd = parseFloat(prompt("Please, choose an odd number between 1 and 50"));
         if (userOdd % 2 === 0) {
-           alert (" That number is not odd, please enter an odd number.");
+            alert(" That number is not odd, please enter an odd number.");
 
         } else {
             break;
@@ -19,10 +19,13 @@
     for (var c = 0; c <= 50; c++) {
         if ((c % 2) != 0) {
             if (c == userOdd) {
+                console.log("Skip this number");
                 continue;
             }
-            console.log(c);
+            console.log("'Here is an odd number:" + c);
         }
     }
+
+
 
 })();

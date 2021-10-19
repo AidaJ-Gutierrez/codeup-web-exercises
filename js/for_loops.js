@@ -22,10 +22,10 @@
 // between 20 and 200 and output to the console whether each number is odd or even.
 
 
-  for (number = 20; number <= 200; number++) {
+  for (r = 1; r<= 10; r++) {
       var number = Math.floor(Math.random() * (200 - 20 + 1) + 20)
       if (number % 2 === 0) {
-          console.log(number + " is even");
+          console.log(number + " is even ");
       } else {
           console.log(number + " is odd");
       }
@@ -40,6 +40,17 @@
          num += "\n";
      }
      console.log(num);
+
+    // David's version
+    // for (var a = 1; a<= 9 ; a+=1){
+    //      var num= ";
+;   //       for (j=1; j<= a; j+1){
+    //              num += a;
+    //          }
+    //        console.log(num);
+    //      }
+    //
+
 
 // 5.Create a for loop that uses console.log to create the output shown below.
 
