@@ -61,8 +61,45 @@
 
 
 // Tuesday Oct. 19
+// -Write a program that console.logs the number from 1 to 100. But for multiples of three
+    // console.log "Fizz" instead of the number and for the multiples of five console.log "Buzz.
+   // For numbers which are multiples of both three and five console.log "FizzBuzz."
+
+    var output = [];
+    var count = 1;
+
+    function fizzBuzz(){
+        while( count <=100){
+           if (count % 3 ===0 && count % 5 === 0){
+               output.push("FizzBuzz");
+           }else if (count % 3 === 0) {
+               output.push("Fizz");
+           } else if(count % 5 === 0){
+               output.push("Buzz");
+           }else{
+               output.push(count);
+           }
+           count++;
+        }
+        console.log(output);
+    }
+
+    console.log(fizzBuzz());
 
 
+
+//    for loop version
+
+ // for(var count=1; count <= 100; count++){
+ //    if (count % 3 ===0 && count % 5 === 0){
+ //        output.push("FizzBuzz");
+ //    }else if (count % 3 === 0) {
+ //        output.push("Fizz");
+ //    } else if(count % 5 === 0){
+ //        output.push("Buzz");
+ //    }else{
+ //        output.push(count);
+ //    }
 
 
 

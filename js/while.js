@@ -2,10 +2,10 @@
 //1. Create a file named while.js in the js directory.
 //
 //2.  Create a while loop that uses console.log() to create the output shown below.
-i = 2;
-    while (i <= 65536) {
-        console.log(i);
-        i *= 2;
+by2 = 2;
+    while (by2 <= 65536) {
+        console.log(by2);
+        by2 *= 2;
     }
 
 // Do While Loop
@@ -17,9 +17,10 @@ i = 2;
 // Use a do-while loop to log to the console the amount of cones sold
 // to each person. This is a way get the random numbers for this exercise.
 
-    var conesToSell = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+    var conesToSell = Math.floor(Math.random() * 50) + 50;
         do {
-            var conesBoughtByCostumers = Math.floor(Math.random() * (5 - 1+ 1) + 1);
+            var conesBoughtByCostumers = Math.floor(Math.random() * 5) + 1;
+
             console.log(conesBoughtByCostumers);
             conesToSell --;
         }while (conesToSell > 50);

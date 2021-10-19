@@ -33,9 +33,9 @@
 // 4. Create a for loop that uses console.log to create the output shown below.
      var n= 9;
      var num="";
-    for (var i = 1; i<= n ; i++){
-      for (j=0; j< i; j++){
-             num += i;
+    for (var a = 1; a<= n ; a++){
+      for (j=0; j< a; j++){
+             num += a;
          }
          num += "\n";
      }
@@ -44,9 +44,9 @@
 // 5.Create a for loop that uses console.log to create the output shown below.
 
 
-    for (var i = 100; i >= 5; i-=5) {
+    for (var b = 100; b >= 5; b-=5) {
 
-        console.log(i);
+        console.log(b);
     }
 
 

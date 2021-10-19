@@ -16,12 +16,12 @@
             break;
         }
     }
-    for (var i = 0; i <= 50; i++) {
-        if ((i % 2) != 0) {
-            if (i == userOdd) {
+    for (var c = 0; c <= 50; c++) {
+        if ((c % 2) != 0) {
+            if (c == userOdd) {
                 continue;
             }
-            console.log(i);
+            console.log(c);
         }
     }
 
