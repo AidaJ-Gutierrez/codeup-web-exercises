@@ -28,15 +28,17 @@ var newPlanetsString =   planetsArray.join('<br>');
 console.log(newPlanetsString);
 
 
-//Bonus
-var planetList = newPlanetsString
-    var ul = document.createElement('ul');
-    document.getElementById('myList').appendChild(ul);
+// //Bonus
+;
+    var planetList = ["Mercury","Venus"," Earth","Mars", "Jupiter","Saturn","Uranus","Neptune"];
 
-    planetList.forEach(function(name){
-        var li = document.createElement('li');
-        ul.appendChild(li);
+   var planetLen = planetList.length;
 
-
-
+    var planet = "<ul>";
+    for (var p = 0; p < planetLen; p++) {
+        planet += "<li>" + planetList[p] + "</li>";
+        planet += "\n";
+    }
+    planet += "</ul>";
+console.log(planet);
 })();
