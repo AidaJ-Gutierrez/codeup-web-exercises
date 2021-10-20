@@ -11,7 +11,7 @@
      * console.log planetsArray to check your work
      */
 
-    var planetsArray= planetsString.split(',');
+    var planetsArray= planetsString.split('|');
     console.log(planetsArray);
 
     /**
@@ -26,19 +26,28 @@
      */
 var newPlanetsString =   planetsArray.join('<br>');
 console.log(newPlanetsString);
+//Why might this be useful?
 
 
 // //Bonus
 ;
-    var planetList = ["Mercury","Venus"," Earth","Mars", "Jupiter","Saturn","Uranus","Neptune"];
 
-   var planetLen = planetList.length;
+
+   var planetLen = planetsArray.length;
 
     var planet = "<ul>";
     for (var p = 0; p < planetLen; p++) {
-        planet += "<li>" + planetList[p] + "</li>";
+        planet += "<li>" + planetsArray[p] + "</li>";
         planet += "\n";
     }
     planet += "</ul>";
 console.log(planet);
+
+    document.write(planet);
+
+// David's Answer
+    // var unorderedListOfPlanets = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>"
+    // console.log(unorderedListOfPlanets);
+    // document.write(unorderedListOfPlanets);
+
 })();
