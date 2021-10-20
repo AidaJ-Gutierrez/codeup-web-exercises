@@ -34,7 +34,7 @@ console.log(names.length);
      * array.
      */
 
-for (var d = 0; d <= names.length - 1; d++){
+for (var d = 0; d < names.length ; d++){
     console.log("The name of this person is " + names[d]);
     }
 
@@ -62,22 +62,38 @@ names.forEach(element=> console.log(element));
 
 
     function first(array){
-        console.log(array[0]);
-    }
+        return array[0];
+         }
+         console.log(first(names));
+
     function second(array){
-        console.log(array[1]);
+        return array[1];
     }
+    console.log(second(names));
+
     function last(array ){
-        console.log(array[4]);
+        return array [array.length -1];
     }
-
-first([1, 2, 3, 4, 5])
-second([1, 2, 3, 4, 5])
-    last([1, 2, 3, 4, 5])
+    console.log(last(names));
 
 
+//Extra exercise:
+    //Define a function named allIndexesOf that takes in two arguments.
+    // The first argument should be the array to search and the second argument should
+    // be the value you want to search for. If the item does not exist in the provided array,
+    // return an empty array.
 
+   // Given:
 
+//    var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
+    // allIndexesOf(fruits, "apple") should return the array [0, 3]
+    // allIndexesOf(fruits, "guava") should return the array []
+    // allIndexesOf(fruits, "pineapple") should return [4]
+ //var index = fruits.indexOf("");
+
+//function allIndexesOf(fruit,index){
+  //      return index;
+//}
 
 
 })();
