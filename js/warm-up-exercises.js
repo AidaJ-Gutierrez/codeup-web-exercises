@@ -101,8 +101,16 @@
  //        output.push(count);
  //    }
 
+//Wednesday Oct. 20
 
 
+//-Create a function named secondToLast
+// tha accepts an array as an  argument and will retturn
+// te econd to last elementof te array.
 
+function secondToLast(array){
+    return array [array.length -2];
+}
 
+console.log(secondToLast(["first","second","not last", "last"]));
 })();

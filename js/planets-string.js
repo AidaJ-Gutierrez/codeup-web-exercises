@@ -27,8 +27,15 @@
 var newPlanetsString =   planetsArray.join('<br>');
 console.log(newPlanetsString);
 
-var planetList = newPlanetsString
 
+//Bonus
+var planetList = newPlanetsString
+    var ul = document.createElement('ul');
+    document.getElementById('myList').appendChild(ul);
+
+    planetList.forEach(function(name){
+        var li = document.createElement('li');
+        ul.appendChild(li);
 
 
 
