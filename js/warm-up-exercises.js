@@ -114,3 +114,24 @@ function secondToLast(array){
 
 console.log(secondToLast(["first","second","not last", "last"]));
 })();
+
+
+//Thursday Oct. 21
+
+// Write a function named 'moveToEnd' that takes in an array, and returns
+// the array with the original first index moved to the last index of
+// the array.
+// example.:moveToEnd([1, 2, 3, 4]) 		  // returns [2, 3, 4, 1];
+// moveToEnd(['roll', 'rock', 'and']  // returns ['rock', 'and', 'roll'];
+//
+
+arr= [1, 2, 3, 4, 5];
+function moveToEnd(arr){
+
+    var first = arr.shift()
+    arr.push(first);
+return number;
+}
+
+console.log(moveToEnd(arr));
+
