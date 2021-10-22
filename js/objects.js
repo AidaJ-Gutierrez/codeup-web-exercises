@@ -28,9 +28,14 @@ var person = {};
 
 person.greeting= "Hello from ";
 
-
 console.log( person.greeting + person.firstName + person.lastName);
 
+
+//Jay's vesion:
+    //person.sayHello = function(){
+    //return "Hello from  + person.firstName + person.lastName"
+// }
+    // console.log(
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -51,20 +56,20 @@ console.log( person.greeting + person.firstName + person.lastName);
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    var discount = shoppers.amount - (shoppers.amount * .12);
-
 
     shoppers.forEach(function (shopper) {
         var discount = shopper.amount - (shopper.amount * .12);
         if (shopper.amount >= 200) {
-            console.log("Hey " + shopper.name + " You total is $" + shopper.amount + " You are getting a discount of $"
-                + (shopper.amount * .12) + " Your new total is $ " + discount + " !");
+            console.log("Hey " + shopper.name + " You total is $" + shopper.amount.toFixed(2) + " You are getting a discount of $"
+                + (shopper.amount * .12).toFixed(2) + " Your new total is $ " + discount.toFixed(2) + " !");
         }
-        if (shopper.amount < 200) {
-            console.log("Hey " + shopper.name + " You total is $" + shopper.amount + ",  Unfortunately you will not get a discount.");
+        else if (shopper.amount < 200) {
+            console.log("Hey " + shopper.name + " You total is $" + shopper.amount.toFixed(2) + ",  Unfortunately you will not get a discount.");
         }
     })
 
+    // inJay's version he put the loop inside a function
+    //
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -80,19 +85,20 @@ console.log( person.greeting + person.firstName + person.lastName);
      */
 
 
-    var firstBook = { title: "The Tinder Box" , author: {  firstName  : "Hans C.", lastName : "Andersen" ,  }};
-    var secondBook = {title:"The Selfish Giant", author: {firstName:"Oscar", lastName:"Wilde",}};
-    var thirdBook = { title: "Sleeping Beauty", author: {  firstName :"Charles" , lastName :"Perrault" ,  }};
-    var fourthBook ={ title: "Goldilocks and The Three Bears", author: {  firstName : "Robert", lastName : "Southey",  }};
-    var fifthBook ={ title: "Jack the Giant Killer", author: {  firstName : "Joseph", lastName :"Jacobs" ,  }};
 
-var books =[ firstBook, secondBook, thirdBook, fourthBook, fifthBook];
+
+var books =[
+    { title: "The Tinder Box" , author: {  firstName  : "Hans C.", lastName : "Andersen"   }},
+    {title:"The Selfish Giant", author: {firstName:"Oscar", lastName:"Wilde"}},
+    { title: "Sleeping Beauty", author: {  firstName :"Charles" , lastName :"Perrault"  }},
+    { title: "Goldilocks and The Three Bears", author: {  firstName : "Robert", lastName : "Southey"  }},
+    { title: "Jack the Giant Killer", author: {  firstName : "Joseph", lastName :"Jacobs"   }},
+    ];
 
 
 console.log(books[0].title);
 console.log(books[0].author.firstName);
 console.log(books[0].author.lastName);
-
 
 
     /**
@@ -127,6 +133,12 @@ console.log(books[0].author.lastName);
 
     });
 
+    //Jay's version:
+    //
+    // for(var j =0; j < book.length; j++){
+    // console.log("book #" + (j+ 1) + '\nTitle: ' + books[j].title + "\nAuthor' + books[j].author.firstName + books[j].author.lastName)
+    // }
+
 
 
     /**
@@ -142,25 +154,38 @@ console.log(books[0].author.lastName);
 
 
     function createBook(title, author){
-var newBook= {
-    title : title,
-    author : {
-        firstName: "firstName",
-        lastName : "lastName",
-    }
-};
-return newBook;
+        var newBook= {
+            title : title,
+            author : {
+                firstName: "firstName",
+                lastName : "lastName",
+                }
+            };
+                return newBook;
         }
 
     console.log(createBook("The Bronce Ring", "Andrew Lang" ));
+//Jay's version:
+    //var library=[];
+    //function createBook(title, author){
+    // var namesArray= author.split(" ");
+    // var book= {
+    //             title : title,
+    //             author : {
+    //                 firstName: namesArray[0],
+    //                 lastName : namesarray[1],
+    //                 }
+    //             }return library.push(book);
+    //console.log('1984' , "George Orwell");
+//
 
 
-    function showBookInfo(books){
-    books.forEach(function( book, index) {
 
-            console.log(book, index);
 
-        });
+    function showBookInfo(array) {
+        for (var j = 0; j < array.length; j++) {
+
+            console.log("book #" + (j + 1) + '\nTitle: ' + array[j].title + "\nAuthor" + array[j].author.firstName + array[j].author.lastName)
+        }
     }
-
 })();
