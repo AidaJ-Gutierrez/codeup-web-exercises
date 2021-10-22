@@ -42,6 +42,8 @@ for (var d = 0; d < names.length ; d++){
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
+     *
+     *
      */
 names.forEach(element=> console.log(element));
 
