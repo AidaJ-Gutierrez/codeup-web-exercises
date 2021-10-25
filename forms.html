@@ -13,17 +13,18 @@
     <section>
         <form method="POST" action="https://request-inspector.glitch.me/">
             <div>
-                <label>Email:</label>
-                <input id="username" name="username" type="text" placeholder="Enter your email">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="text" placeholder="Enter your email">
             </div>
             <div>
                 <label for="password">Password</label>
                 <input id="password" name="password" type="password" placeholder="Enter your Password">
             </div>
-            <label>Tell us about yourself. </label>
+            <br>
+            <label>Tell Us About Yourself. </label>
             <div>
 
-                <textarea id="email_body" name="email_body" rows=10 cols="45"></textarea>
+                <textarea id="bio" name="bio" rows=10 cols="45"></textarea>
                 <br>
 
             </div>
@@ -49,21 +50,28 @@
                 <br>
 
             </div>
-            <label for="browser">Which browser are you using? </label>
-            <select id="browser" name="browser[]" multiple>
-                <option value="chrome">Chrome</option>
-                <option value="firefox">Firefox</option>
-                <option value="safari">Safari</option>
-                </select>
             <br>
-
             <div>
-                <button type="submit">Submit </button>
+                <label for="browser">Which browser are you using? </label>
+                <select id="browser" name="browser" >
+                    <option value="pick-one"></option>
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">Firefox</option>
+                    <option value="safari">Safari</option>
+                </select>
+
+
             </div>
-
-
-
-
+            <div>
+                <br>
+                <button type="submit">Register</button>
+            </div>
+<!--            <form action="https://www.elformo.com/forms/c87e937a-a14e-4fc6-864a-638d45e4764d" method="post" accept-charset="UTF-8">-->
+<!--                <input id="email" name="email" type="email" />-->
+<!--                <textarea id="comment" name="comment"></textarea>-->
+<!--                <input id="submit" name="submit" type="Submit" />-->
+<!--                       -->
+<!--            </form>-->
         </form>
 
 
@@ -71,7 +79,7 @@
 
 
 
-    </section>b
+    </section>
 </main>
 
 
