@@ -135,3 +135,23 @@ return number;
 
 console.log(moveToEnd(arr));
 
+//Monday October 25.
+var myPokemon = {
+    name: "Rapidash",
+    description: "This Pokémon can be seen galloping through fields at speeds of up to 150 mph, its fiery mane fluttering in the wind.",
+    height: {
+        feet:5,
+        inches: 7
+    },
+    category: "Fire Horse",
+    abilities:{
+        one: "Run Away",
+        two: "Fash Fire"
+    },
+    weeknesses: {
+        fistsWeakness:"water",
+        secondWeakness:"ground",
+        ThirdWeakness:"rock"}
+
+};
+

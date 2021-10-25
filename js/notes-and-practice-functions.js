@@ -31,7 +31,7 @@ console.log(ggreetings());
 console.log(firstName, lastName);
 
 
-// Immediately Invole Function Expression (IIFE).
+// Immediately Invoke Function Expression (IIFE).
 
 // Syntax:
 
