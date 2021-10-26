@@ -1,6 +1,6 @@
 
 
-
+"use strict";
 
 
 
@@ -25,19 +25,20 @@
 
     var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
 
-function allIdexesOf(fruits, val) {
-    var indexes = [], i = -1;
-    while ((i = fruits.indexOf(val, i+1)) != -1){
-        indexes.push(i);
-    }
-    return indexes;
+function allIndexesOf(arr, val){
+
+        for (var b = 0; b <= arr.length; b++) {
+            if (arr[b] === val) {
+                (arr.indexOf(val), 1);
+            }}
+    return arr.indexOf[b];
+
 }
-
-var indexes =allIdexesOf(fruits, "apple");
-
+console.log(allIndexesOf(fruits,"apple"));
 
 
 
+``
 //
 // Define a function named removeAll(array, value) that takes in two arguments. The first argument
 // should be an array and the second argument should be a value you wish to remove
@@ -50,13 +51,11 @@ var indexes =allIdexesOf(fruits, "apple");
 // removeAll(bugs, "roach") should return the original array b/c "roach" has no occurrences.
 
 
-function removeAll(bugs, val){
-    var removeItem= [];
-
-return bugs;
+function removeAll(arr, val) {
+    for (var b = 0; b <= arr.length; b++) {
+        if (arr[b] == val) {
+            (arr.splice(arr.indexOf[b]), 1);
+        }
+    }
 }
-
-var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-var filtered = array.filter(function(value, index, arr){
-    return value > 5;
-});
+removeAll(bugs,"ant");

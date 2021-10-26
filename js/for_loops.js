@@ -9,7 +9,7 @@
     function showMultiplicationTable(num){
 
         for( var n = 1; n <= 10; n++){
-            console.log(num + " x "  + n +" = " + n*num)
+            console.log(num + " x "  + n +" = " + n * num)
 
         }
     }

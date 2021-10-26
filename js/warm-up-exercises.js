@@ -130,7 +130,7 @@ function moveToEnd(arr){
 
     var first = arr.shift()
     arr.push(first);
-return number;
+return arr;
 }
 
 console.log(moveToEnd(arr));
@@ -154,4 +154,46 @@ var myPokemon = {
         ThirdWeakness:"rock"}
 
 };
+
+
+// Monday October 26
+// Create a function that accepts an array as an argument, and that returns and array of objects
+//that have a nationality property of "Canadian".
+var wrestlers = [
+    {
+        name: "Bret Hart",
+        nationality: "Canadian"
+    }, {
+        name: "Shawn Michaels",
+        nationality: "American"
+    }, {
+        name: "Christian Cage",
+        nationality: "Canadian"
+    }, {
+        name: "Keiji Mutoh",
+        nationality: "Japanese"
+    }, {
+        name: "Eddy Guerrero",
+        nationality: "American"
+    }, {
+        name: "Owen Hart",
+        nationality: "Canadian"
+    }
+
+
+];
+
+function getCanadians(arr){
+var bucket = [];
+
+    arr.forEach(function(element){
+        if(element.nationality === "Canadian"){
+           bucket.push(element);
+        }
+    })
+return bucket;
+}
+console.log(getCanadians(wrestlers));
+
+
 
