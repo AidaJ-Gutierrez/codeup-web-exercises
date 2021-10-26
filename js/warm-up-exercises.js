@@ -185,7 +185,6 @@ var wrestlers = [
 
 function getCanadians(arr){
 var bucket = [];
-
     arr.forEach(function(element){
         if(element.nationality === "Canadian"){
            bucket.push(element);

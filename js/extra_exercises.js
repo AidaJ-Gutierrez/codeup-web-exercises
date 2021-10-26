@@ -24,17 +24,12 @@
 
 
     var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
-
-function allIndexesOf(arr, val){
-
-        for (var b = 0; b <= arr.length; b++) {
-            if (arr[b] === val) {
-                (arr.indexOf(val), 1);
-            }}
-    return arr.indexOf[b];
-
-}
-console.log(allIndexesOf(fruits,"apple"));
+//
+ function allIndexesOf(arr, val){
+if ((arr.indexof )=== val){
+    return val;
+} }
+ console.log(allIndexesOf(fruits,"apple"));
 
 
 
@@ -52,10 +47,13 @@ console.log(allIndexesOf(fruits,"apple"));
 
 
 function removeAll(arr, val) {
-    for (var b = 0; b <= arr.length; b++) {
-        if (arr[b] == val) {
-            (arr.splice(arr.indexOf[b]), 1);
+
+
+    for (var b =0; b< arr.length; b++) {
+        if (arr[b] === val) {
+            var removed = arr.splice(b, 1);
         }
+        return arr;
     }
 }
 removeAll(bugs,"ant");
