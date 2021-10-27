@@ -1,0 +1,133 @@
+
+body{
+
+    background-image: url('../images/tech1.png') ;
+    background-color:#FEF5ED ;
+    background-size: 4000px;
+    background-repeat: no-repeat;
+
+
+}
+img{
+    border-radius: 25px;
+    width: 450px;
+    height: 300px;
+}
+th{
+    color: #FF8303;
+    border: 3px;
+    padding: 1rem;
+    text-align: center;
+}
+
+td{
+    border: 3px;
+    padding:0.8rem;
+    color:#FFC288;
+    text-align: center;
+
+
+}
+
+
+footer{
+    text-align: center;
+}
+
+.fancy-header {
+    color: #BDC7C9;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.subtitle{
+    text-align: right;
+    color: #FEA82F;
+
+}
+.subtitle-2{
+    text-align: center;
+    color: #FEA82F;
+}
+.column{
+    column-count: 3;
+    text-align: center;
+}
+.paragraph{
+    color: #FF6701;
+    font-family: Baskerville;
+    font-size: larger;
+    text-align: center;
+}
+.bottom{
+    color: #FF6701;
+    text-align: center;
+}
+ul.a-list {
+    list-style-type: square;
+    display: inline-block;
+    color:#FEF5ED;
+
+}
+ul.c-list {
+    list-style-type: circle;
+    display: inline-block;
+    color: #FEF5ED;
+
+
+}
+ol.b-list {
+    list-style-type: upper-roman;
+    display: inline-block;
+    color: #FEF5ED;
+
+}
+
+.form{
+    text-align: center;
+}
+#info-left{
+ float: left;
+    width:25%;
+    height:280px;
+}
+#info-middle{
+    float:left;
+    width:50%;
+    height:280px;
+}
+#info-right{
+    float: right;
+    width:25%;
+    height:280px;
+}
+
+#images{
+    text-align: center;
+
+}
+#items{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+a:link {
+    color: #BDC7C9;
+}
+
+
+a:visited {
+    color: #FF8303;
+}
+
+
+a:hover {
+    color: #F21170;
+}
+
+a:active {
+    color: #FF5200;
+}
+a:
