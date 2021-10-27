@@ -1,0 +1,37 @@
+
+body{
+
+    background-image: url('../images/building.jpg') ;
+    background-color:#FEF5ED ;
+    background-size: 3500px;
+    background-repeat: no-repeat;
+
+
+
+}
+
+
+
+.fancy-header {
+    color: #B73535 ;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.paragraph{
+    color:#0D132A;
+    text-align: center;
+}
+
+a:link{
+    position: center;
+}
+
+#images{
+    text-align: center;
+}
+#table{
+    text-align: center;
+}
+
