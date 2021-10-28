@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+
+
+.recipe-container{
+    border: 2px solid hotpink;
+    width:60% ;
+    margin: 0 auto;
+    background-color: #D3E4CD;
+}
+.pb-j{
+    background-color: #FEF5ED;
+    height: fit-content;
+    width: calc(100% -20px);
+    /*padding: !*top-bottom->>*! 20px /*left-right->>*!10px;*/
+    padding: 10px ;
+    margin: 10px;
+    border-radius: 10px;
+}
+.grilled{
+    background-color:#D4B499 ;
+
+}
+.bred{
+    background-color: #D9CAB3 ;
+}
+.peanut{
+    background-color: #CFB784;
+
+}
+.jelly{
+    background-color: #AA2B1D;
+}
+
+
+
+
+
