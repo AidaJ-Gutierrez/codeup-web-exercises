@@ -33,3 +33,23 @@ background-color: #FCFBC9;
     color:#933249;
     background-color: #FBD3D7;
 }
+
+
+/*CSS Variables
+:root{
+
+--bg-info:#5D5AAE
+--text-info:
+--bg:success:
+--text-success:
+--bg-warning:
+--text-warning:
+--text-warning:
+--bg-error:
+--text-error:
+
+replace in css class:
+.message-error{
+ color:var(--bg-info);
+    background-color: #FBD3D7;
+*/
