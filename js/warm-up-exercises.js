@@ -206,3 +206,56 @@ var area = Math.round(Math.PI * Math.pow(circle.radius,2));
 
 
 console.log(area);
+
+//November 2
+//Create a function that takes in an array of objects,
+// and returns the object with the highest quantity property.
+
+var groceries = [
+    {
+        name: "carrots",
+        quantity: 5
+    },{
+        name: "yams",
+        quantity: 50
+    },{
+        name: "oranges",
+        quantity: 9
+    },{
+        name: "onions",
+        quantity: 2
+    },{
+        name: "cucumbers",
+        quantity: 6
+    },{
+        name: "potatoes",
+        quantity: 8
+    }
+];
+function giveMeHighQuantity(arr){
+    var obj = {
+        name: "",
+        quantity: 0
+    }
+    arr.forEach(function (el)){
+        if( el.quantity > obj.quantity) {
+            obj = el;
+     }
+        return obj;
+    }
+
+
+
+
+
+
+
+
+
+
+
+})();
+
+
+
+
