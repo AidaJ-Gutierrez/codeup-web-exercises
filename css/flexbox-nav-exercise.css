@@ -3,12 +3,13 @@
 /*Nav-Bar*/
 *{
     box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
+
 }
 
 body{
     margin: 0;
     background-color: #DDDDDD;
+    font-family: Montserrat, sans-serif;
 }
 
 nav{
@@ -65,10 +66,13 @@ nav{
     text-decoration: none;
 }
 
-i{
+a:hover > i{
     color: #212121;
     padding: 0 10px;
+    color: blue;
 }
+
+
 /*container*/
 .container{
     box-sizing: content-box;
