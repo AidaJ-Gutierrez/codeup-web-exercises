@@ -73,11 +73,12 @@ i{
 .container{
     box-sizing: content-box;
 
-
 }
 
 /*footer*/
 #footer {
+    box-sizing: content-box;
+    justify-content: center;
     background-color: #212121;
 
 }
