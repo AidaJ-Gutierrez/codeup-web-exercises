@@ -44,8 +44,8 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid top-banner">
-    <div class="container-fluid d-none d-sm-block ">
+<div class="jumbotron jumbotron-fluid top-banner d-none d-sm-block">
+    <div class="container-fluid  ">
          <h1 class="display-4">Welcome to Pizza World!</h1>
 
     </div>
@@ -56,15 +56,15 @@
 
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and Crust</a>
-            <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
-            <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            <a class="nav-link active" id="nav-size-tab" data-toggle="tab" href="#nav-size" role="tab" aria-controls="nav-size" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span>Size and Crust</a>
+            <a class="nav-link" id="nav-cheese-tab" data-toggle="tab" href="#nav-cheese" role="tab" aria-controls="nav-cheese" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
+            <a class="nav-link" id="nav-topping-tab" data-toggle="tab" href="#nav-topping" role="tab" aria-controls="nav-topping" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="tab-pane fade show active" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
             <div class=" container-fluid">
-                <div class="card " style="max-width: ">
+                <div class="card " >
                     <div class="card-header text-white bg-primary">
                         Size and Crust
                     </div>
@@ -95,16 +95,16 @@
                         </ul>
                     </div>
                     <div class="card-footer text-right">
-                        <button type="button" class="btn btn-primary">Next Step ></button>
+                        <a href=""> <button type="button" class="btn btn-primary"> Next Step ></button></a>
                     </div>
         </div>
                 </div>
         </div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="tab-pane fade" id="nav-cheese" role="tabpanel" aria-labelledby="nav-cheese-tab">
 
             <div class=" container-fluid">
                 <div class="card " style="max-width: 100%">
-                    <div class="card-header text-white bg-primary">
+                    <div class="card-header text-white bg-primary ">
                         Cheese and Sauce
                     </div>
 
@@ -113,7 +113,7 @@
                             Cheese
                         </div>
                         <div class="form-group">
-                            <label for="cheese-Input">How Much?</label>
+                            <label for="cheese-Input"> How Much?</label>
                             <select class="custom-select mr-sm-2" id="cheese-Input">
                                 <option selected>Choose...</option>
                                 <option value="1">Light</option>
@@ -130,7 +130,7 @@
                             Sauce
                         </div>
                         <div class="form-group">
-                            <label for="sauce-Input">What type?</label>
+                            <label for="sauce-Input"> What type?</label>
                             <select class="custom-select mr-sm-2" id="sauce-Input">
                                 <option selected>Choose...</option>
                                 <option value="1">Tomato Sauce</option>
@@ -140,7 +140,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="sauce-quantity">How Much?</label>
+                            <label for="sauce-quantity"> How Much?</label>
                             <select class="custom-select mr-sm-2" id="sauce-quantity">
                                 <option selected>Choose...</option>
                                 <option value="1">Light</option>
@@ -162,11 +162,11 @@
             </div>
             <br>
         </div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="tab-pane fade" id="nav-topping" role="tabpanel" aria-labelledby="nav-topping-tab">
 
 
             <div class=" container-fluid">
-                <div class="card " style="max-width: ">
+                <div class="card " >
                     <div class="card-header text-white bg-primary">
                         Choose Toppings
                     </div>
