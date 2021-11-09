@@ -232,17 +232,19 @@ var groceries = [
         quantity: 8
     }
 ];
-// function giveMeHighQuantity(arr){
-//     var obj = {
-//         name: "",
-//         quantity: 0
-//     }
-//     arr.forEach(function (el){
-//         if( el.quantity > obj.quantity) {
-//             obj = el;
-//      }
-//         return obj;
-//     })
+function giveMeHighQuantity(arr){
+    var obj = {
+        name: "",
+        quantity: 0
+    }
+    arr.forEach(function (el){
+        if( el.quantity > obj.quantity) {
+            obj = el;
+     }
+        return obj;
+    })}
+
+console.log(giveMeHighQuantity(arr));
 
     // Write a function named 'sortByName' that takes in array of objects, and returns
     // an array of objects in alphabetical order based on the name property.
@@ -281,8 +283,61 @@ var groceries = [
 
 console.log(sortByName(products));
 
+    //November 9th
+
+// Write a function in Javascript that takes in an array of objects and returns
+// the object with the lowest height property. Consider the following array to
+//test your code.
+var bBallPlayers = [
+    {
+        name: "Hakeem Olajuwon",
+        height: 213
+    }, {
+        name: "Muggsy Bogues",
+        height: 160
+    }, {
+        name: "Chris Paul",
+        height: 183
+    }, {
+        name: "Bol Bol",
+        height: 218
+    }, {
+        name: "Moochie Norris",
+        height: 185
+    }, {
+        name: "Manu Ginobili",
+        height: 198
+    }
+];
 
 
+// function lowestHeight(arr){
+//     var obj = {
+//        height: 0
+//     }
+//         arr.forEach(function (el){
+//          if( el.height < obj.height) {
+//              obj = el;
+//       }
+//          return obj;
+//         })
+//
+//
+// }
+//
+// console.log(((bBallPlayers)));
+
+//David's
+function findShortest(arr){
+    var holdThis = {height: Number.MAX_VALUE};
+    arr.forEach(function (el){
+        if( el.height < holdThis.height) {
+            holdThis = el;
+        }
+        return holdThis;
+    })
+}
+console.log(findShortest(bBallPlayers));
 
 
 
