@@ -351,7 +351,7 @@ var myCharacter = {
     hitPoints: 100,
     class: 'Warrior',
     abilities: {
-        attack: function(obj) {
+        attack: function(obj) { // target this
             console.log(myCharacter.name + "hit" + obj.name + "for" + myCharacter.weapon.damage + "damage!")
             obj.hitPoints -= myCharacter.weapon.damage;
             console.log(obj.name + "has" + obj.hitPoints + "hit points left")
@@ -379,9 +379,18 @@ myCharacter.abilities.attack(enemy);
 myCharacter.abilities.attack(enemy);
  myCharacter.abilities.attack(enemy);
 
+//November 12th
+
+//Write a function in JavaScript that takes in an array, and returns a random element from the array.
+//
+//Ex. randomEl(["rock", "paper". "scissors", "lizard", "Spock])// return an element from the array.
 
 
 
+function randomEl(arr){
+    return arr[Math.floor(Math.random()*arr.length)];
+}
+console.log(randomEl(["rock", "paper","scissors", "lizard", "Spock"]));
 
 
 
