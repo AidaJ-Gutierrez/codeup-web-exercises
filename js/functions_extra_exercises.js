@@ -176,11 +176,20 @@ console.log(isLowerCase("A"))
 
 // Make a function named hasLowerCase(string) that returns if a string has
 // any lower cased letter
+function hasLowerCase(string){
+    return string.toUpperCase() !== string;
+}
+console.log(hasLowerCase("CAT sad DAD"));
 
-console.log("missing this exercise")
+
 // Make a function named isSpace(letter) that returns if a character is a space character
+function isSpace(letter){
+    return letter.indexOf(' ') >=0;
+}
+console.log(isSpace("No"))
 
-console.log("missing this exercise")
+
+
 // Make a function named isZero(number)
 function isZero(input){
     if(  input === 0){
@@ -204,7 +213,7 @@ console.log(notZero(2));
 
 // Write a function named lowerCase(string)
 
-console.log(("missing this exercise"))
+console.log(("missing this exercise is confusing"))
 
 
 // Write a function named double(n) that returns a number times two
@@ -259,9 +268,15 @@ function remainder(a, b){
     return (a % b);
 }
 console.log(remainder(5 ,2))
-// Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
 
-console.log("missing this exercise")
+
+
+
+// Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
+function modulo(a, b){
+    return (a%b);
+}
+console.log(modulo(6 , 4))
 
 // Write a function named cube(n) that returns n * n * n
 function cube(n){
@@ -269,6 +284,8 @@ function cube(n){
 }
 
 console.log(cube(2))
+
+
 // Write a function named squareRoot(n) that returns the square root of the input
 function squaredRoot(n){
     return Math.sqrt(n);
@@ -301,54 +318,78 @@ console.log(radiansToDegrees(45))
 // Make a function named isBlank(input) that determines if a given input is spaces, newline
 // characters, or tabs.
 function isBlank(input){
-
+return input.indexOf(' ') >=0;// will return false if no space or true if space
 }
-
+console.log(isBlank("cat dog"))
 //     Make a function named trim(string) that removes empty spaces before and after the input.
 function trim(string){
-
+return string.trim();
 }
+
+console.log(trim("      string"));
+
 //     Make a function named areEqual(input1, input2) that returns if both inputs have the same value
 
-function areEqual(input1, inpit2){
-
+function areEqual(input1, input2){
+return (input1 == input2);
 }
+
+console.log(areEqual("cat", "0"))
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value
 // and data type.
 
-function areIdentical(input1, inpit2){
-
+function areIdentical(input1, input2){
+    return (input1 === input2);
 }
-
+console.log(areIdentical("cat", "cat"))
 //     Make a function named not(input) returns the input with a flipped boolean
 function not(input){
-
+return !input;
 }
+
+console.log(not(0))
+
+
 // Make a function named notNot(input) that the negation of the negation of the input.
 function notNot(input){
-
+    return !(!input);
 }
+console.log(notNot(1))
+
+
+
 //     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
 function and(predicate1,predicate2){
-
+//confusing
+    return (predicate1 && predicate2);
 }
+console.log(and(1,1))
+
+
+
 
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
 function or(predicate1,predicate2){
-
+return (predicate1 || predicate2);
 }
 
 // Write a function called reverseString(string) that reverses a string
-function reverse(string){
-
+function reverseString(string){
+return string.split('').reverse().join('');
 }
+console.log(reverseString("papalote"));
+
 
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
 function absoluteValue(number){
-
+    return Math.abs(number)
 }
+console.log(absoluteValue(-3));
 
-//     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+
+//     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have.
+//     Generate a random number between 1 up to and including the number of sides.
 function rollDice(sides){
-
+    return Math.floor(Math.random(5) * 6);
 }
+console.log(rollDice(6));
