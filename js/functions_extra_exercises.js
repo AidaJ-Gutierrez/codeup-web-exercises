@@ -1,6 +1,6 @@
 "use strict";
 
-
+console.log("function exercises:");
 //Functions using conditionals but not loops or arrays:
 
 //   //  Make a function named isOdd(number)
