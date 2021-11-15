@@ -308,63 +308,73 @@ function getRandomQuote(arr) {
 // // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
 
-function getIndexesOf(anyChar,anyStr){
-    var count = [];
-    var position = anyStr.indexOf(anyChar);
+// function getIndexesOf(anyChar,anyStr){
+//     var count = [];
+//     var position = anyStr.indexOf(anyChar);
+//
+//     while (position > -1) {
+//         count++;
+//         position = anyStr.indexOf(anyChar, position + 1);
+//     }
+//         return count;
+// }
+//
+// console.log(getIndexesOf("i","kexqui xiuitl tikpia?"))
+// console.log("!!!!!!this one is no doing what i want!!!!!!")
 
-    while (position > -1) {
-        count++;
-        position = anyStr.indexOf(anyChar, position + 1);
+function getIndexesOf(charStr, anyStr) {
+    var countArray = [];
+    var i = -1
+    while ((i = anyStr.indexOf(charStr, i + 1)) >= 0) {
+        countArray.push(i)
     }
-        return count;
+    return countArray
 }
 
-console.log(getIndexesOf("i","kexqui xiuitl tikpia?"))
+console.log(getIndexesOf("a", "banana"));
+//
+// Exercise 9. Write a function named removeAll.
+// It should accept an array and a value
+// removeAll should return an array with all of the original contents EXCEPT for the provided value
+// iterate across the input array
+// output array
+// Example: removeAll([1, 2, 3], 2) should return [1, 3]
+// Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
+function removeAll(arr, value) {
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            arr.splice(i,1);
+            i--;
+        }
+    }
+    return arr;
+}
+
+console.log("this removeAll is a repetition from the one on top")
 
 
 
+//Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array
+// of the first ten fibonacci numbers
 
-//                     function getIndexesOf(charStr, anyStr) {
-//                         let countArray = [];
-//                         let i = -1
-//                         while ((i = anyStr.indexOf(charStr, i + 1)) >= 0) {
-//                             function getIndexesOf(charStr, anyStr) {
-//                                 let countArray = [];
-//                                 let i = -1
-//                                 while ((i = anyStr.indexOf(charStr, i + 1)) >= 0) {
+function firstTenFibonacciaNumbers(n) {
+var output =[];
+    if (n===1){
+        output =[0];
+    }else if(n===2){
+        output =[0,1]
+    }else{
+        output =[0,1];
+        for (var i=2; i, n; i++){
+            output.push(output[output.length - 2] + output[output.length -1]);
+        }
+    }
+    return ouput;
+}
+ console.log(firstTenFibonacciaNumbers(10));
 //
-//                                     countArray.push(i)
-//                                     countArray.push(i)
-//                                 }
-//                                 return countArray
-//                             }
-//
-//                             return countArray
-//                         }
-//
-//                         console.log(getIndexesOf("a", "banana"));
-//                         console.log(getIndexesOf("a", "banana"));
-//
-// // Exercise 9. Write a function named removeAll.
-// // It should accept an array and a value
-// // removeAll should return an array with all of the original contents EXCEPT for the provided value
-// // iterate across the input array
-// // output array
-// // Example: removeAll([1, 2, 3], 2) should return [1, 3]
-// // Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
-//
-// // Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
-//                         function firstTenFibonacciaNumbers() {
-//                             return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34,];
-//                         }
-//
-//                         console.log(firstTenFibonacciaNumbers());
-//
-//                         function firstTenFibonacciaNumbers() {
-//                             return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34,];
-//                         }
-//
-//                         console.log(firstTenFibonacciaNumbers());
+
 //
 // // Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n fibonacci numbers
 //                         function getNFibonaccia(n) {
