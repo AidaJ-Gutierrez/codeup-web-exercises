@@ -357,6 +357,8 @@ console.log("this removeAll is a repetition from the one on top")
 
 //Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array
 // of the first ten fibonacci numbers
+//
+//
 
 function firstTenFibonacciaNumbers(n) {
 var output =[];
@@ -366,44 +368,32 @@ var output =[];
         output =[0,1]
     }else{
         output =[0,1];
-        for (var i=2; i, n; i++){
+        for (var i=2; i< n; i++){
             output.push(output[output.length - 2] + output[output.length -1]);
         }
     }
-    return ouput;
+    return output;
 }
  console.log(firstTenFibonacciaNumbers(10));
-//
+
+
+// // Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n fibonacci
+// numbers
+function getNFibonacci(n) {
+    var n1 = 0, n2 = 1;
+   var arrFibo = [];
+    for (var i = 1; i <= n; i++) {
+    arrFibo.push(n1);
+    var nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+return arrFibo;
+}
+
+console.log(getNFibonacci(20));
 
 //
-// // Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n fibonacci numbers
-//                         function getNFibonaccia(n) {
-//                             let n1 = 0, n2 = 1;
-//                             let fibArr = [];
-//                             for (let i = 1; i <= n; i++) {
-//                                 fibArr.push(n1);
-//                                 var nextTerm = n1 + n2;
-//                                 n1 = n2;
-//                                 n2 = nextTerm;
-//                             }
-//                             return fibArr
-//                         }
-//
-//                         console.log(getNFibonaccia(15));
-//
-//                         function getNFibonaccia(n) {
-//                             let n1 = 0, n2 = 1;
-//                             let fibArr = [];
-//                             for (let i = 1; i <= n; i++) {
-//                                 fibArr.push(n1);
-//                                 var nextTerm = n1 + n2;
-//                                 n1 = n2;
-//                                 n2 = nextTerm;
-//                             }
-//                             return fibArr
-//                         }
-//
-//                         console.log(getNFibonaccia(15));
 // // Exercise 12. Write a function named moveFirstToLast() that takes in an array
 // // the function should return the array with the first element at the end
 // // Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
