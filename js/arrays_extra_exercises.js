@@ -397,39 +397,28 @@ console.log(getNFibonacci(20));
 // // Exercise 12. Write a function named moveFirstToLast() that takes in an array
 // // the function should return the array with the first element at the end
 // // Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
-//
-//                         function moveFirstToLast(arr) {
-//                             let b = arr.shift()
-//                             arr.push(b)
-//                             return arr;
-//                         }
-//
-//                         console.log(moveFirstToLast([1, 2, 3, 4, 5]));
-//
-//                         function moveFirstToLast(arr) {
-//                             let b = arr.shift()
-//                             arr.push(b)
-//                             return arr;
-//                         }
-//
-//                         console.log(moveFirstToLast([1, 2, 3, 4, 5]));
+
+function moveFirstToLast(arr) {
+    var b = arr.shift()
+    arr.push(b)
+    return arr;
+}
+
+console.log(moveFirstToLast([1, 2, 3, 4, 5]));
+
+
 // // Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
 // // Zip returns a new array of arrays where each element is an array of the two elements at the same index
 // // Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])
 // // Example: zip(["a", "b", "c"], ["x", "y", "z"]) returns [["a", "x"], ["b", "y"], ["c", "z"]]\
-//                         function zip(arr1, arr2) {
-//                             let pairArr = [];
-//                             for (var i = 0; i < arr1.length; i++) {
-//                                 if (arr1.length === arr2.length) {
-//                                     pairArr[i] = [arr1[i], arr2[i]];
-//                                     for (var i = 0; i < arr1.length; i++) {
-//                                         if (arr1.length === arr2.length) {
-//                                             pairArr[i] = [arr1[i], arr2[i]];
-//
-//                                         }
-//                                     }
-//                                     return pairArr;
-//                                 }
-//                             }
-//                             return pairArr;
-//                         }
+function zip(arr1, arr2) {
+    var pairArr = [];
+    for (var i = 0; i < arr1.length; i++) {
+        if (arr1.length === arr2.length) {
+            pairArr[i] = [arr1[i], arr2[i]];
+        }
+        return pairArr;
+    }
+}
+console.log("this one is confusing:");
+console.log(zip([1, 2, 3], [4, 5, 6]));
