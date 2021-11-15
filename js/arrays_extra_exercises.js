@@ -210,138 +210,120 @@ function rest(arr) {
 
 
 // // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array
-//         function getLongestString(arr) {
-//             var maxStr = arr[0].length;
-//             var ans = arr[0];
-//             for (var i = 1; i < arr.length; i++) {
-//                 var max = arr[i].length;
-//                 if (max > maxStr) {
-//                     ans = arr[i];
-//                     maxStr = max;
 //
-//                     function getLongestString(arr) {
-//                         var maxStr = arr[0].length;
-//                         var ans = arr[0];
-//                         for (var i = 1; i < arr.length; i++) {
-//                             var max = arr[i].length;
-//                             if (max > maxStr) {
-//                                 ans = arr[i];
-//                                 maxStr = max;
-//                             }
-//                         }
-//                         return ans;
-//                     }
-//
-//                     return ans;
-//                 }
-//
-//                 console.log(getLongestString(["long", "longer", "longest"]));
-//
-// // Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.
-//                 function getShortestString(arr) {
-//                     var minNum = arr[0]
-//                     for (var i = 0; i < arr.length; i++) {
-//                         if (arr[i] < minNum) {
-//                             minNum = arr[i];
-//
-//                             function getShortestString(arr) {
-//                                 var minNum = arr[0]
-//                                 for (var i = 0; i < arr.length; i++) {
-//                                     if (arr[i] < minNum) {
-//                                         minNum = arr[i];
-//                                     }
-//
-//                                 }
-//                                 return minNum;
-//
-//                             }
-//
-//                             return minNum;
-//                         }
-//
-//                     }
-//                     console.log(getShortestString(["long", "longer", "longest"]));
-// // Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
+// var arr = [
+//     'first item',
+//     'second item is longer than the third one',
+//     'third longish item'
+// ];
+
+function getLongestString(arr) {
+    var maxStr = arr[0].length;
+    var ans = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        var max = arr[i].length;
+        if (max > maxStr) {
+            ans = arr[i];
+            maxStr = max;
+            return ans;
+        }
+    }
+}
+console.log(getLongestString(["long", "longer", "longest"]));
+
+
+
+// Exercise 3.1 Write a function named getShortestString that takes in an array of strings
+// and returns the shortest string in that array.
+
+function getShortestString(arr) {
+    var minNum = arr[0]
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < minNum) {
+            minNum = arr[i];
+        }
+    }
+    return minNum;
+
+}
+
+console.log(getShortestString(["long", "longer", "longest"]));
+
+
+// // Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays.
+// The function should return a single array containing all of the elements of the first array
+// along with all of the elements of the second array
 // // Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]
-//                     function addTwoArrays(arr1, arr2) {
-//                         return arr1.concat(arr2);
-//                     }
-//
-//                     console.log(addTwoArrays([1, 2, 3], [4, 5, 6]));
-//
-//                     function addTwoArrays(arr1, arr2) {
-//                         return arr1.concat(arr2);
-//                     }
-//
-//                     console.log(addTwoArrays([1, 2, 3], [4, 5, 6]));
-// // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
-// // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
-//                     function getUniqueValue(arr) {
-//                         var boxArr = [];
-//                         arr.forEach(function (element) {
-//                             if (!boxArr.includes(element)) {
-//                                 boxArr.push(element)
-//                             }
-//                         });
-//                         return boxArr;
-//                     }
-//
-//                     console.log(getUniqueValue(['a', 'b', 'a', 'b', 'c', 'c']))
-//
-//                     function getUniqueValue(arr) {
-//                         var boxArr = [];
-//                         arr.forEach(function (element) {
-//                             if (!boxArr.includes(element)) {
-//                                 boxArr.push(element)
-//                             }
-//                         });
-//                         return boxArr;
-//                     }
-//
-//                     console.log(getUniqueValue(['a', 'b', 'a', 'b', 'c', 'c']))
-// // Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed, but without altering the original array.
-//                     let myArr = [1, 2, 3, 4]
-//
-//                     function reverseArray(arr) {
-//                         return arr.slice().reverse();
-//                     }
-//
-//                     console.log(reverseArray(myArr));
-//                     console.log(myArr);
-//                     let myArr = [1, 2, 3, 4]
-//
-//                     function reverseArray(arr) {
-//                         return arr.slice().reverse();
-//                     }
-//
-//                     console.log(reverseArray(myArr));
-//                     console.log(myArr);
+
+
+ function addTwoArrays(arr1, arr2) {
+     return arr1.concat(arr2);
+ }
+ console.log(addTwoArrays([1, 2, 3], [4, 5, 6]));
+
+
+ // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the
+// array without any duplicates
+ // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
+
+function getUniqueValue(arr) {
+    var boxArr = [];
+    arr.forEach(function (element) {
+        if (!boxArr.includes(element)) {
+            boxArr.push(element)
+        }
+    });
+    return boxArr;
+}
+
+console.log(getUniqueValue(['a', 'b', 'a', 'b', 'c', 'c']))
+// // Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed,
+// but without altering the original array.
+
+function reverseArray(arr){
+    return arr.reverse();
+}
+console.log(reverseArray([1,2,3,4]));
+
 // // Exercies 7. Write a function named getRandomQuote().
-// //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
-// //   getRandomQuote should generate a random number between 0 and the array's length minus 1
-// //   use the randomly generated number as your index
-// //   return a random quote.
-//                     let randomQuotes = ["Love For All, Hatred For None", "Every moment is a fresh beginning", "Never regret anything that made you smile", "Yesterday you said tomorrow. Just do it", "Try to be a rainbow in someone’s cloud."]
-//
-//                     function getRandomQuote(arr) {
-//                         return arr[Math.floor(Math.random() * arr.length)];
-//                         let randomQuotes = ["Love For All, Hatred For None", "Every moment is a fresh beginning", "Never regret anything that made you smile", "Yesterday you said tomorrow. Just do it", "Try to be a rainbow in someone’s cloud."]
-//
-//                     }
-//
-//                     function getRandomQuote(arr) {
-//                         return arr[Math.floor(Math.random() * arr.length)];
-//
-//                         console.log(getRandomQuote(randomQuotes));
-//                     }
-//
-//                     console.log(getRandomQuote(randomQuotes));
+// //   Inside of the function, create an array of strings where each string is a quote or thought
+// you find inspirational; getRandomQuote should generate a random number between 0 and the array's
+// length minus 1, use the randomly generated number as your index return a random quote.
+
+var quotes = ["Love For All, Hatred For None", "Every moment is a fresh beginning", "Never regret anything that made you smile", "Yesterday you said tomorrow. Just do it", "Try to be a rainbow in someone’s cloud."]
+function getRandomQuote(arr) {
+
+   var indexQuotes = Math.floor(Math.random() * (quotes.length -1));
+    for( var i =0; i < quotes.length; i++ ){
+        var randomQuote = arr[indexQuotes];
+    }return randomQuote;
+}
+ console.log(getRandomQuote(quotes));
+
+
 // // Exercise 8. Write a function named getIndexesOf() that takes in two arguments.
 // // The first argument should be a specific numeral or character
 // // The second argument should be any given string
 // // getIndexesOf() should return an array containing all of the indexes of that character in the string
 // // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
+
+function getIndexesOf(anyChar,anyStr){
+    var count = [];
+    var position = anyStr.indexOf(anyChar);
+
+    while (position > -1) {
+        count++;
+        position = anyStr.indexOf(anyChar, position + 1);
+    }
+        return count;
+}
+
+console.log(getIndexesOf("i","kexqui xiuitl tikpia?"))
+
+
+
+
 //                     function getIndexesOf(charStr, anyStr) {
 //                         let countArray = [];
 //                         let i = -1
