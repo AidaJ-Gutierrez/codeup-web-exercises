@@ -92,13 +92,17 @@ document.getElementById("btn1").addEventListener("click", javaSCool);
         function javaSCool(){
             document.getElementById("main-header").innerHTML="JavaScript is Cool";
         }
+
+
+
+
 //2
         document.getElementById("btn2").addEventListener("click", changeLiColor);
         function changeLiColor(){
             for (var color = 0; color < listItems.length; color++) {
                if (listItems[color].getAttribute('data-dbid') === "1"){
                    listItems[color].style.color = 'blue';
-               }else if(color % 2 !== 0){
+               }else if(color % 2 === 0){
                    listItems[color].style.color = 'grey';
                }
             }
