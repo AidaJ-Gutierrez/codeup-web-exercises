@@ -393,8 +393,11 @@ function randomEl(arr){
 console.log(randomEl(["rock", "paper","scissors", "lizard", "Spock"]));
 
 
-
-
+//November 18th
+//
+//The Document Object Model allows us to manipulate the document object with multiple methods and properties.
+//The Browser Object Model allows us to manipulate what object in a similar manner?
+// A: The Window
 
 
 
