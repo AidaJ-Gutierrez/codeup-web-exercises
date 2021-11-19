@@ -17,38 +17,44 @@
 
 
 // element selectors
-$("li").css("font-size", "20px");
-$('li');
-$('h1');
-$('p');
-
-alert($("h1").html());
+// $("li").css("font-size", "20px");
+// $('li');
+// $('h1');
+// $('p');
+//
+// alert($("h1").html());
 
 
 //Multiple selectors
 
-$('h1','p', 'li');
+// $('h1','p', 'li');
 
 
 
 //jq events
 //
+
+$("h1").click(function(){
+    $("h1").css("background-color", "red");
+});
+
+$("p").dblclick( function(){
+   $("p").css("font-size", "18px") ;
+});
+
+$("li").hover(
+    function() {
+    $(this).css("color","red");
+},
+    function(){
+        $(this).css("color","black");
+    });
+
+$(".one-btn").click(function(){
+    $("h1").css("color","#49FF00");
+});
 //
-// $(".one-btn").click(function(){
-// $("h1").css("color","#49FF00");
-// });
-// //
-// $("p").on("mouseover", function() {
-//     $("p").css("color","#FF0075");
-// });
-// $("h1").click(function(){
-//     $("h1").css("background-color", "red");
-// });
-//
-// $("p").dblclick( function(){
-//    $("p").css("font-size", "18px") ;
-// });
-//
-// $("li").hover( function() {
-//     $("li").css("color","red");
-// });
+$("p").on("mouseover", function() {
+    $("p").css("color","#FF0075");
+});
+
