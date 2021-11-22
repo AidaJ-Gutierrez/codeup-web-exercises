@@ -399,6 +399,49 @@ console.log(randomEl(["rock", "paper","scissors", "lizard", "Spock"]));
 //The Browser Object Model allows us to manipulate what object in a similar manner?
 // A: The Window
 
+// November 22th
+//
+//You are in charge of adding form validation for the login page for a contract
+// position. Navigate to your login-form.html file in codeup-web exercises,
+// write your code in a inline script.
+// Below is the username and password we would like you to test with:
+// Var username = "regulus2021"
+// Var password = "gocodeup"
+
+///If the user enters in the wrong username or password, add a small text element under the password input
+// field that reads "We're sorry, your username or password is incorrect.
+// Please try again." This string should also be red.
+//
+
+
+// This is additional answer to Jay's answer
+// var username = "regulus2021"
+// var password = "gocodeup"
+//
+// var attempt = 3; //Variable to count number of attempts
+// attempt --; //Decrementing by one
+//
+// function validate (){
+//
+//     var username = document.getElementById("username").value;
+//     var password = document.getElementById("password").value;
+//     if ( username === "regulus2021" && password === "gocodeup"){
+//         alert ("Login successfully");
+//         return false;
+//     }
+//     else{
+//         attempt --;// Decrementing by one.
+//         alert("We're sorry, your username or password is incorrect. Please try again. You have left "+attempt+" attempt;");
+// // Disabling fields after 3 attempts.
+//         if( attempt == 0){
+//             document.getElementById("username").disabled = true;
+//             document.getElementById("password").disabled = true;
+//             document.getElementById("submit").disabled = true;
+//             return false;
+//         }
+//     }
+}
+
 
 
 

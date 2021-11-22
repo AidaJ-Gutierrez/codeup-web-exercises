@@ -7,20 +7,55 @@
 </head>
 <body>
 <main>
-    <form action="#">
+    <form action="#" method="post">
         <fieldset class="width-80">
             <div class="form-group">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" class="form-control">
+                <label for="username" class="form-label" >Username</label>
+                <input type="text" id="username" name="username" class="form-control" >
             </div>
             <div class="form-group">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label" >Password</label>
                 <input type="password" id="password" name="password" class="form-control">
             </div>
-            <button class="btn btn-block">Login</button>
+            <button class="btn btn-block" id="submit" onclick="validate()" >Login</button>
         </fieldset>
     </form>
 </main>
 
+
+
+<script>
+
+    var username = "regulus2021"
+    var password = "gocodeup"
+
+    var attempt = 3; //Variable to count number of attempts
+    attempt --; //Decrementing by one
+
+    function validate (){
+
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if ( username === "regulus2021" && password === "gocodeup"){
+            alert ("Login successfully");
+            // window.location = "success.html"; // Redirecting to other page.
+            return false;
+        }
+        else{
+            attempt --;// Decrementing by one.
+            alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+            if( attempt == 0){
+                document.getElementById("username").disabled = true;
+                document.getElementById("password").disabled = true;
+                document.getElementById("submit").disabled = true;
+                return false;
+            }
+        }
+    }
+
+
+
+</script>
 </body>
 </html>
