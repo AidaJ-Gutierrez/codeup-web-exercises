@@ -78,7 +78,8 @@
 //
 
 $("h1").click(function(){
-    $("h1").css("background-color", "red");
+    $(this).css("background-color", "red");// will change only this element when clicked.
+        // $("h1").css("background-color", "red"); will change ALL elements with same tag
 });
 
 $("p").dblclick( function(){
