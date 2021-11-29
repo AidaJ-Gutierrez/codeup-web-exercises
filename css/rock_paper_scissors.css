@@ -1,0 +1,90 @@
+body{
+    background-color: #F8F0DF;
+}
+section{
+    height: 100vh;
+
+    font-family: SansSerif;
+}
+.score{
+    color: #457491;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 50px;
+
+}
+.score h2{
+    font-size: 30px;
+    margin-top: 20px;
+
+}
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+
+}
+.intro{
+    color: #457491;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition:opacity 0.5s ease;/*This controls the speed of the transition from intro to game*/
+}
+.intro h1{
+    font-size: 50px;
+}
+.start, .match button{
+    width: 120px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: #CDDEFF;
+    font-size: 20px;
+    background: #03506F;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    padding: 10px;
+}
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition:opacity 0.5s ease 0.5s; /*This controls the speed of the transition from intro to game*/
+}
+
+.winner{
+    color: #457491;
+    text-align: center;
+    font-size: 50px;
+}
+.hands, .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.player-hand{
+    transform: rotatey(180deg) rotate(-90deg); /* mirror image of hands*/
+
+}
+.computer-hand{
+    transform: rotate(-90deg);
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
