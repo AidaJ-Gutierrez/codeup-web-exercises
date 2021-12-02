@@ -19,22 +19,9 @@
 <div id='map' style='width: 400px; height: 300px;'></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--script for keys.js above any cdn.-->
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script>
     mapboxgl.accessToken = MAPBOX_KEY;
     const map = new mapboxgl.Map({
@@ -44,7 +31,7 @@
         zoom: 9 // starting zoom - any number between 0 and 24 - 0 been world view, 24 all the way zoom in
     });
 
-
+//1.
     //TODO: Mini exercise #1 - Create an HTML file named mapbox-1.html. Create a map that is centered at the San Antonio Airport with the zoom set to 12.
     //TODO: After 5 seconds, use a method found in the documentation to fly to the DFW Airport and change the map style to satellite streets.
     //      *BONUS* Create a button labeled "Zoom In", and when the button is clicked, increases the zoom value by 1.\
