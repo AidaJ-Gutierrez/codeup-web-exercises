@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mapbox-1</title>
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<div id='map' style='width: 600px; height: 400px;'></div>
+<br>
+<button id="zoom-in">Zoom In</button>
+
+
+
+
+
+
+
+
+
+
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.48016570193745, 29.534392977011294], // starting position [lng, lat] - san Antonio location
+        zoom: 12 // starting zoom - any number between 0 and 24 - 0 been world view, 24 all the way zoom in
+    });
+
+
+    //TODO: Mini exercise #1 - Create an HTML file named mapbox-1.html. Create a map that is centered at the San Antonio Airport 29.534392977011294, -98.48016570193745 with the zoom set to 12.
+    //TODO: After 5 seconds, use a method found in the documentation to fly to the DFW Airport (32.89923198186237, -97.03984256969109) and change the map style to satellite streets.
+    //      *BONUS* Create a button labeled "Zoom In", and when the button is clicked, increases the zoom value by 1.\
+
+
+    // setTimeout(function () {
+    //      map.flyTo({
+    //
+    //         center: [-97.03984256969109, 32.89923198186237],
+    //          speed: 0.5,
+    //         essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    //     })
+    //     map.setStyle("mapbox://styles/mapbox/satellite-streets-v11")
+    // },5000);
+    //
+    //    document.querySelector("#zoom-in").addEventListener('click', function(){
+    //        map.setZoom(map.getZoom() + 1);
+    //    })
+
+
+
+    //MARKERS
+    var codeup = new mapboxgl.Marker({
+        color: "blue",
+    })
+        .setLngLat([-98.48615, 29.426827]).setDraggable(true)// setLngLat== location of marker, setDraggable(true)== the marker can be move
+
+
+    //adding our newly instantiated marker object to the Map object for rending
+    codeup.addTo(map)// add the marker to the map
+
+// must use .on method to recognize mapbox events
+    codeup.on('dragend',function(){
+        popup.setLngLat(codeup.getLngLat()) //your popup moves with your marker
+        //console.log(codeup.getLngLat());// will give you the lat and lng of the new location of the marker codeup
+    })
+
+    //POPUPS
+
+    var popup = new mapboxgl.Popup()
+    .setLngLat(codeup.getLngLat())
+    .setHTML('<h3>Hello from Codeup!</h3>') // it can be text or image// and you can also add inline styling
+    .addTo(map)
+
+
+</script>
+</body>
+
+
+
+
+</html>

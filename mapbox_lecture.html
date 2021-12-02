@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Lecture</title>
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+
+</head>
+<body>
+<h1>Welcome to Mapbox!</h1>
+
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--script for keys.js above any cdn.-->
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4683, 29.5312], // starting position [lng, lat] - san Antonio location
+        zoom: 9 // starting zoom - any number between 0 and 24 - 0 been world view, 24 all the way zoom in
+    });
+
+
+    //TODO: Mini exercise #1 - Create an HTML file named mapbox-1.html. Create a map that is centered at the San Antonio Airport with the zoom set to 12.
+    //TODO: After 5 seconds, use a method found in the documentation to fly to the DFW Airport and change the map style to satellite streets.
+    //      *BONUS* Create a button labeled "Zoom In", and when the button is clicked, increases the zoom value by 1.\
+
+ //2.
+    // Mini Exercise 2
+    // Create an HTML file called mapbox-2.html. In this file, create a map centered
+    // on New York with a marker on the Statue of Liberty. Add a popup to the Statue of
+    // Liberty marker with the text "Statue of Liberty".
+    // *BONUS - when the marker is dragged and released, display the coordinates in an H1 below the map.
+</script>
+
+</body>
+</html>
