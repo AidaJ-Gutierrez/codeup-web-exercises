@@ -4,36 +4,105 @@
     <meta charset="UTF-8">
     <title>mapbox_maps_api</title>
 
-
+<!--mapbox css-->
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
-<div id='map' style='width: 600px; height: 400px;'></div>
+<div id='map' style='width: 900px; height: 700px;'></div>
 
-
-
-
-
-
-
-
-
-
+<select id="zoom-select">
+    <option selected disabled>Zoom Level</option>
+    <option value="5">Zoom Level 5</option>
+    <option value="9">Zoom Level 9</option>
+    <option value="15">Zoom Level 15</option>
+    <option value="20">Zoom Level 20</option>
+</select>
 
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script>
     mapboxgl.accessToken = MAPBOX_KEY;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-98.48016570193745, 29.534392977011294],
-        zoom: 12
+        center: [-98.4951, 29.4246],
+        zoom:10
     });
+    // var popup = new mapboxgl.Popup()
+    //     .setHTML('<h4>Trilogy Pizza Bistro</h4>')
+    //     .addTo(map)
+    //
+    //
+    // var trilogy = new mapboxgl.Marker({
+    //     color: "red",})
+    //     .setLngLat([-98.49605239088407, 29.63024434247855])
+    //     .setPopup(popup)
+    //     .addTo(map)// add the marker to the map
 
 
 
+    map.setZoom(6);
+
+    var myRestaurants = [
+        {
+            name: "Hugo's",
+            address: "1600 Westheimer Rd, Houston, TX 77006",
+            // getLngLat: [-95.39958265155269, 29.743179051753156]
+        },
+        {
+            name: "Taste of Texas",
+            address: "10505 Katy Freeway, Houston, TX 77024",
+            // getLngLat: [-95.55681280092776,29.78299408083442]
+        },
+        {
+            name: "Wayne's Wings",
+            address: "4453 Walzem Rd, San Antonio, TX 78218",
+            // getLngLat:[-98.40887076045325,29.510285680086024]
+        },
+        {
+            name: "YAO Restaurant & Bar",
+            address: "9755 Westheimer Rd, Houston, TX 77042",
+            // getLngLat:[-95.540663,29.73688717754374]
+        },
+        {
+            name: "Trilogy Pizza Bistro",
+            address: "19141 Stone Oak Pkwy #113, San Antonio, TX 78258",
+            // getLngLat:[-98.49605239088407, 29.63024434247855]
+        },
+        {
+            name: "Paloma Blanca",
+            address: "5800 Broadway #300, San Antonio, TX 78209",
+            // getLngLat:[-98.46346682161861,29.479790525958386]
+        }
+    ]
+
+    myRestaurants.forEach(function (restaurant) {
+        geocode(myRestaurants.address, MAPBOX_KEY).then(function(coordinates) {
+
+
+            var popup = new mapboxgl.Popup()
+                .setHTML(myRestaurants.name.address)
+                // .setLngLat(myRestaurants.getLngLat())
+                .addTo(map)
+
+            var marker = new mapboxgl.Marker({color : 'red',})
+                .setLngLat(coordinates)
+                .setPopup(popup)
+                .addTo(map);
+
+        });
+    })
+    var zoomSelect = document.getElementById('zoom-select');
+    console.log(zoomSelect);
+
+    zoomSelect.addEventListener('change', function(){
+        console.log('Zoom level change.');
+        var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value;
+
+        map.setZoom(zoomValue);
+    });
 
 </script>
 
@@ -49,3 +118,21 @@
 
 </body>
 </html>
+
+
+<!--// myRestaurants.on('click',function(){-->
+<!--//     popup.setLngLat(myRestaurants.address.getLngLat())-->
+<!--//-->
+<!--// })-->
+
+<!--//-->
+<!--//-->
+<!--// var zoomSelect = document.getElementById('zoom-select');-->
+<!--// console.log(zoomSelect);-->
+<!--//-->
+<!--// zoomSelect.addEventListener('change', function(){-->
+<!--//     console.log('Zoom level change.');-->
+<!--//     var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value;-->
+<!--//-->
+<!--//     map.setZoom(zoomValue);-->
+<!--// });-->
