@@ -1,0 +1,33 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to open weather</title>
+</head>
+<body>
+<h1>open your console</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ALL THE SCRIPTS-->
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!--keys-->
+<script src="js/keys.js"></script>
+
+<!--openweather-->
+<script>
+    $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.7604&lon=-95.3698&exclude=minutely,hourly&units=imperial&appid="+ OPEN_WEATHER_KEY).done(function(data){console.log(data)})
+</script>
+</body>
+</html>

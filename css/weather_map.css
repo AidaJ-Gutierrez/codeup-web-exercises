@@ -1,0 +1,39 @@
+/* Apply a 'dark background' */
+
+/*color-palette*/
+
+/*
+
+#046582,
+#F6C065,
+#355C7D,
+#155263,
+#155263,
+558776
+
+*/
+
+html body{
+    background-color: #E6E6E6;
+}
+
+h1{
+    font-family: Helvetica, serif;
+    font-weight: bold;
+    color: #34626C;
+
+}
+
+#map{
+    width: auto;
+    height: 500px;
+    margin: auto;
+    border: 2px solid #011F3F;
+}
+
+.weatherInfo{
+    border: 2px solid #011F3F;
+    border-radius: 10px;
+}
+
+
