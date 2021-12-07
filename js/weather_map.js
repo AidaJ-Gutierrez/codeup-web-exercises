@@ -32,7 +32,7 @@ $.get("https://api.openweathermap.org/data/2.5/onecall", {
 }).done(function (data) {
     console.log(data);
     fiveDaysWeather = data.daily;
-//loop through amount of days want displayed with weather
+    //loop through amount of days want displayed with weather
     for (var i = 0; i <= 5; i++) {
         var html = renderWeather(fiveDaysWeather[i]);
         $(".weatherInfo").eq(i).append(html);
@@ -55,58 +55,47 @@ function renderWeather(weather) {
     return html;
 }
 //call the function for the search when marker is dragged
-const coordinates = document.getElementById('coordinates');
-function onDragEnd() {
-    const lngLat = marker.getLngLat();
-    coordinates.style.display = 'block';
-    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+marker.on('dragend', function () {
 
+    let lnglat = marker.getLngLat()
+    console.log(lnglat)
+    map.setZoom(10);
+    map.setCenter(marker.getLngLat())
+    // Display current location city name on the navbar
 
-    reverseGeocode( $(coordinates.lon,coordinates.lat), MAPBOX_KEY).then(function (results) {
-        // Display current location city name on the navbar
-        // $("#current-city").html("Current Weather in " + $(markSearch));  // case insensitive
-        // marker at new location
-        marker.setLngLat(results);
-        $.get("https://api.openweathermap.org/data/2.5/onecall", {
-            // q: $('#coordinates').val().split(", ")[0],// query the input search
-            appid: OPEN_WEATHER_KEY,
-            units: "imperial"
-        }).done(function (weather) {
-            console.log(weather);
-        });
-        // fly to the place searched
-        map.flyTo({
-            place_name: results,
-            zoom: 10,
-            speed: 0.8
-        });
-// Update the five-day forecast in new location
-        $.get("https://api.openweathermap.org/data/2.5/onecall", {
-            APPID: OPEN_WEATHER_KEY,
-            lat: results[1],
-            lon: results[0],
-            units: 'imperial',
-            exclude: 'hourly, minutely, alerts',
-        }).done(function (data) {
-            console.log(data);
-            fiveDaysWeather = data.daily;
+    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        APPID: OPEN_WEATHER_KEY,
+        lat: lnglat.lat,
+        lon: lnglat.lng,
+        exclude: "hourly",
+        units: "imperial",
+    }).done(function (weather) {
+        console.log(weather);
+    });
+    // Update the five-day forecast in new location
+    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        APPID: OPEN_WEATHER_KEY,
+        lat: lnglat.lat,
+        lon: lnglat.lng,
+        units: 'imperial',
+        exclude: 'hourly, minutely, alerts',
+    }).done(function (data) {
+        console.log(data);
+        fiveDaysWeather = data.daily;
 
-            // Clear the html so the weather does not stack after hitting submit button when searching.
-            $(".weatherInfo").html('')
+        // Clear the html so the weather does not stack after hitting submit button when searching.
+        $(".weatherInfo").html('')
 
-            //loop through amount of days want displayed with weather
-            for (var i = 0; i <= 5; i++) {
-                var html = renderWeather(fiveDaysWeather[i]);
+        //loop through amount of days want displayed with weather
+        for (var i = 0; i <= 5; i++) {
+            var html = renderWeather(fiveDaysWeather[i]);
 
-                $(".weatherInfo").eq(i).append(html);
+            $(".weatherInfo").eq(i).append(html);
 
-            }
-        });
+        }
     });
 
-}
-
-marker.on('dragend', onDragEnd);
+});
 
 
 
