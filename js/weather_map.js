@@ -62,7 +62,10 @@ marker.on('dragend', function () {
     map.setZoom(10);
     map.setCenter(marker.getLngLat())
     // Display current location city name on the navbar
-
+    // reverseGeocode({lng,lat}, MAPBOX_KEY).then(function(results){
+    //
+    //     $("#current-city").html("Current Weather in " + );  // case insensitive
+    // })
     $.get("https://api.openweathermap.org/data/2.5/onecall", {
         APPID: OPEN_WEATHER_KEY,
         lat: lnglat.lat,
