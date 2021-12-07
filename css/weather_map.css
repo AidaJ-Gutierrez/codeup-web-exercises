@@ -14,26 +14,38 @@
 */
 
 html body{
-    background-color: #E6E6E6;
+    background-color:#22577E;
 }
-
-h1{
+.navbar{
+    background-color: #5584AC;
+}
+h1, h2{
     font-family: Helvetica, serif;
     font-weight: bold;
-    color: #34626C;
+    color: #E6E6E6;
 
 }
 
+h4, h5{
+    color:#22577E;
+}
+.card{
+    background-color:  #E6E6E6;
+}
 #map{
-    width: auto;
-    height: 500px;
-    margin: auto;
+    width: 900px;
+    height: 460px;
+
     border: 2px solid #011F3F;
 }
 
 .weatherInfo{
-    border: 2px solid #011F3F;
+    /*border: 2px solid #011F3F;*/
     border-radius: 10px;
+    color:#0B409C;
 }
 
-
+.img-fluid{
+    width: 100px;
+    height: 100px;
+}

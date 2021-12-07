@@ -20,7 +20,7 @@
 <!--navbar,  top of the page-->
 
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+<nav class="navbar navbar-expand-md navbar-dark  mb-4">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">MyWeather</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +28,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--                </li>-->
 <!--                <li class="nav-item">-->
 <!--                    <a class="nav-link" href="#">Link</a>-->
 <!--                </li>-->
@@ -42,63 +42,68 @@
             <!--search section-->
 
             <form class="d-flex" action="/" method="post">
-                <label for="cityInput">City Name: </label>
+                <label class="text-light" for="cityInput">City Name: </label>
                 <input class="form-control me-2" id="cityInput" type="text"  placeholder="Search" name="cityName" >
-                <button id ="search" class="btn btn-outline-success" type="submit">Go</button>
+                <button id ="search" class="btn btn-outline-light" type="submit">Go</button>
 
             </form>
         </div>
     </div>
 </nav>
 
-<h1 class="container-fluid d-flex justify-content-center" id="currentCity">Current Weather in San Antonio</h1>
+<h1 class="container-fluid d-flex justify-content-start" id="current-city">Current Weather in San Antonio</h1>
 
 <!--map with a marker dragable-->
-<div class="container-fluid ">
+<div class="row container-fluid d-flex  justify-content-around">
 
-    <div id="map" class="container "></div>
+    <div id="map" class="col-10 container align-self-start "></div>
+
     <!--Today's weather info-->
-    <div class="weatherInfo col-3" id="Today">
-        <div class="card card-body bg-dark text-white">
-            Today's Weather information:
-        </div>
+    <div class="col-2 card card-body  text-primary ms-5">
+        <h4 class="text-center">Today's Weather information:</h4>
+        <div class="  weatherInfo fs-5 text-center" id="Today">
+    </div>
+        <pre id="coordinates" class="coordinates"></pre>
     </div>
 
 </div>
 <br>
+<h2 class="container-fluid d-flex justify-content-center" id="forecast">Week Forecast</h2>
 
 <nav class="d-flex justify-content-evenly">
     <!--Tomorrow's weather info-->
-    <div class="weatherInfo" id="Tomorrow">
-        <div class="card card-body bg-dark text-white">
-            Day 2 Weather information:
-        </div>
+  <div class="card card-body  text-primary mx-3">
+           <h5 class="text-center">Day 2 Weather information:</h5>
+      <div class="weatherInfo text-center" id="Tomorrow">
+      </div>
     </div>
 
     <!--Day 3 weather info-->
-    <div class="weatherInfo" id="Day3">
-        <div class="card card-body bg-dark text-white">
-            Day 3 Weather information
+        <div class="card card-body text-primary mx-3">
+            <h5 class="text-center">Day 3 Weather information:</h5>
+            <div class="weatherInfo text-center" id="Day3">
         </div>
     </div>
 
     <!--Day 4 weather info-->
-    <div class="weatherInfo" id="Day4">
-        <div class="card card-body bg-dark text-white">
-            Day 4 Weather information
-        </div>
+    <div class="card card-body  text-primary mx-3">
+        <h5 class="text-center">Day 4 Weather information:</h5>
+        <div class="weatherInfo text-center" id="Day4">
+    </div>
     </div>
 
     <!--Day 5 weather info-->
-    <div class="weatherInfo" id="Day5">
-        <div class="card card-body bg-dark text-white ">
-            Day 5 Weather information
+
+        <div class="card card-body  text-primary mx-3">
+           <h5 class="text-center">Day 5 Weather information:</h5>
+            <div class="weatherInfo text-center" id="Day5">
         </div>
     </div>
     <!--Day 6 weather info-->
-    <div class="weatherInfo" id="Day6">
-        <div class="card card-body bg-dark text-white ">
-            Day 6 Weather information
+
+        <div class="card card-body  text-primary mx-3 ">
+            <h5 class="text-center">Day 6 Weather information</h5>
+            <div class="weatherInfo text-center" id="Day6">
         </div>
     </div>
 </nav>
