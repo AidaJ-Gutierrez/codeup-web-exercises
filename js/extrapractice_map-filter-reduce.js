@@ -69,12 +69,30 @@ const family = [
 // //
 // //    1. Create an array of the first letters of each fruit
 // //
+let firstLetter = fruits.map(function (item){
+    return item.substr(0,1);
+})
+console.log(firstLetter)
 // // 2. Create array of user objects based on the customers array of objects (each user object should just have name and age properties)
 // //
+
+
+let user = customers.map(user => user.name + ", " + user.age + ", ");
+console.log(user);
+
 // // 3. Create an array of civil servant customers (teachers and police officers) containing the same properties as the objects on the customers objects
 // //
+
+let civilServant =customers.filter(civil => civil.occupation !== 'Librarian');
+    console.log(civilServant);
 // // 4. Determine the average age of all the customers
 // //
+let averageAge= customers.reduce((totalAge, currentUser) => {
+    return totalAge + currentUser.age;
+},0)/ customers.length;
+
+
+console.log(averageAge)
 // // 5. Create a function makeSuperPet() that takes in the pets array as input and returns a single pet object with the following shape...
 //
 // {
@@ -82,6 +100,13 @@ const family = [
 //         age: THE_TOTAL_OF_ALL_PET_AGES,
 //     breed: THE_FIRST_LETTERS_OF_ALL_PET_BREEDS_CONCATENATATED_INTO_A_SINGLE_STRING
 // }
+const usersNames=  pets.reduce((longEmail, currentUser) =>{
+    return longEmail + currentUser.name + ", ";
+}, {});
+
+console.log(usersNames)
+
+
 // 6. Create a function that takes in an array of pets and returns an array of the length of first names for pugs only. Your output for the given input should be [3, 6] for 'Bud' and 'Bowser'
 //
 // 7. Create a function getFemaleFamilyMembers() that when given the family variable as an argument, returns an array of female family member names
@@ -232,7 +257,7 @@ var newReleases = [
 // allIndexesOf(fruits, "apple") should return the array [0, 3]
 // allIndexesOf(fruits, "guava") should return the array []
 // allIndexesOf(fruits, "pineapple") should return [4]
-var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
+var fruitsTwo= ["apple", "banana", "orange", "apple", "pineapple"];
 
 
 // Challenge:
@@ -244,27 +269,27 @@ var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "re
 // removeAll(bugs, "ant") should return ["mosquito", "scorpion", "mosquito", "typo", "reference error", "type error"]
 // removeAll(bugs, "mosquito") should return ["ant", "scorpion", "ant", "ant", "typo", "reference error", "type error"]
 // removeAll(bugs, "roach") should return the original array b/c "roach" has no occurrances.
-const fruits = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
-const customers = [
-    {
-        name: "Fred",
-        age: 58,
-        occupation: "Police Officer",
-        noOfPurchases: 4
-    },
-    {
-        name: "Samantha",
-        age: 54,
-        occupation: "Teacher",
-        noOfPurchases: 18
-    },
-    {
-        name: "Charles",
-        age: 38,
-        occupation: "Librarian",
-        noOfPurchases: 9
-    }
-];
+// const fruitsThree = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
+// const customers = [
+//     {
+//         name: "Fred",
+//         age: 58,
+//         occupation: "Police Officer",
+//         noOfPurchases: 4
+//     },
+//     {
+//         name: "Samantha",
+//         age: 54,
+//         occupation: "Teacher",
+//         noOfPurchases: 18
+//     },
+//     {
+//         name: "Charles",
+//         age: 38,
+//         occupation: "Librarian",
+//         noOfPurchases: 9
+//     }
+// ];
 
 // PROBLEM 1 - create an array of the first letters of each fruit
 //HINT: use .map()
@@ -281,7 +306,7 @@ const customers = [
 /* ---------------------------------------------------------------------- */
 
 // Given the following array...
-const names = ["John", "Max", "Ronald"];
+const namesTwo = ["John", "Max", "Ronald"];
 
 // complete the bonuses below...
 // - Create an array where all names are given a last name of Smith.
@@ -297,23 +322,23 @@ const names = ["John", "Max", "Ronald"];
 /* ---------------------------------------------------------------------- */
 
 // Given the following array...
-const family = [
-    {
-        name: "Karen",
-        gender: "female",
-        age: 29,
-    },
-    {
-        name: "Summer",
-        gender: "female",
-        age: 10,
-    },
-    {
-        name: "Bob",
-        gender: "male",
-        age: 32,
-    },
-];
+// const family = [
+//     {
+//         name: "Karen",
+//         gender: "female",
+//         age: 29,
+//     },
+//     {
+//         name: "Summer",
+//         gender: "female",
+//         age: 10,
+//     },
+//     {
+//         name: "Bob",
+//         gender: "male",
+//         age: 32,
+//     },
+// ];
 
 // complete the bonuses below...
 // - Calculate the average age of family members

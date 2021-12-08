@@ -58,15 +58,31 @@ const averageYearsExp= users.reduce((totalYears, currentUser) => {
 console.log(averageYearsExp);
 // Use .reduce to get the longest email from the list of users.
 
-const longestEmail = users.reduce((accumulation, currentUser) => {
-    if (accumulation.email.length > currentUser.email.length) {
-       return accumulation;
+const longestEmail = users.reduce((longEmail, currentUser) => {
+    if (longEmail.email.length > currentUser.email.length) {
+       return longEmail;
     } else {
         return currentUser;
     }
 }).email;
  console.log(longestEmail);
-// Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-const usersNames= 'Your instructors are: '  + users.reduce((accumulation, currentUser) =>{
-    return accumulation + currentUser.name + ",";
+
+
+
+// Use .reduce to get the list of user's names in a single string.
+// Example: Your instructors are: ryan, luis, zach, fernando, justin.
+const usersNames= 'Your instructors are: '  + users.reduce((longEmail, currentUser) =>{
+    return longEmail + currentUser.name + ", ";
 },"");
+
+console.log(usersNames)
+
+//Bonus
+// Use .reduce to get the unique list of languages from the list of users.
+
+
+
+
+
+
+
