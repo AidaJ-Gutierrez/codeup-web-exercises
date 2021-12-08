@@ -39,9 +39,9 @@ const users = [
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable (check)
 // declared as `const`
 
-const name = 'your_name_here';
-const email = '';
-const languages = [];
+const name = 'Aida';
+const email = 'aidaj.gutierrez@gmail.com';
+const languages = ['html', 'css', 'javascript'];
 
 
 // name= "Aida";
